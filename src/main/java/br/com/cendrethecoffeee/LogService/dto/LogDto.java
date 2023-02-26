@@ -1,7 +1,9 @@
 package br.com.cendrethecoffeee.LogService.dto;
 
 
+
 import lombok.Data;
+
 import java.time.LocalDateTime;
 
 @Data
@@ -13,7 +15,7 @@ public class LogDto {
 
     private String changeDescription;
 
-    private String modifieldObjectId;
+    private String modifiedObjectId;
 
-    private LocalDateTime modificationDate;
+   private LocalDateTime modificationDate;
 }
