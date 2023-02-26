@@ -1,5 +1,6 @@
 package br.com.cendrethecoffeee.LogService.entity;
 
+import br.com.cendrethecoffeee.LogService.dto.LogDto;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -27,6 +28,14 @@ public class LogEntity {
 
     @Column(nullable = false)
     private LocalDateTime modificationDate;
+
+    public void ToEntity(LogDto logDto){
+        this.responsibleUser = logDto.getResponsibleUser();
+        this.modifierObject = logDto.getModifierObject();
+        this.changeDescription = logDto.getChangeDescription();
+        this.modifieldObjectId = logDto.getModifieldObjectId();
+        this.modificationDate = logDto.getModificationDate();
+    }
 
 
 
